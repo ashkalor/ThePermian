@@ -37,7 +37,7 @@
             </VBox>
 
         </HBox>
-        <Label fx:id="welcomeText" alignment="CENTER" onMouseClicked="#welcomeHandler" prefHeight="90.0"
+        <Label alignment="CENTER" onMouseClicked="#welcomeHandler" prefHeight="90.0"
                prefWidth="800.0" styleClass="welcome-text" stylesheets="@../css/styles.css" text="CLICK TO START"
                textFill="#ffffff4d">
             <font>
