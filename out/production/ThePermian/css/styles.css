@@ -1,21 +1,26 @@
 .welcome-text{
     color:#EDE9DE;
 }
-.button{
+.button-bottom{
     -fx-background-radius:20;
     -fx-background-color:RGBA(152,111,1,0.3);
 }
-.cuisine-label{
+.meal-item{
     -fx-padding:15px;
     -fx-border-style: solid;
     -fx-border-color: #FFF;
     -fx-border-width: 2px;
 }
 .cuisine-selection{
+    -fx-padding:15px;
     -fx-border-style: solid;
-    -fx-border-color: #ccc;
+    -fx-border-color: #CCC;
     -fx-border-width: 2px;
 }
+.meal-item-list{
+    -fx-padding:10px;
+}
+
 .side-pane{
     -fx-background-color:#000000;
 }
@@ -23,4 +28,19 @@
     -fx-background-radius:20;
     -fx-background-color:RGBA(255,219,131,1);
     -fx-text-fill:#000000;
+}
+
+.cart-item-button {
+  -fx-text-fill: #8a2b06;
+  -fx-border-style: solid;
+  -fx-border-color: #8a2b06;
+  -fx-border-width: 1px;
+  -fx-border-radius: 3px;
+  -fx-background-color: transparent;
+}
+
+.cart-item-button:hover,
+.cart-item-button:active {
+  -fx-background-color: #8a2b06;
+  -fx-text-fill: white;
 }

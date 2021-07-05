@@ -10,6 +10,15 @@ import java.util.Objects;
 
 public class Main extends Application {
 
+    public boolean INCuisine=true;
+    public boolean FRCuisine=false;
+    public boolean ITCuisine=false;
+    public boolean MECuisine=false;
+    public boolean CHCuisine=false;
+    public boolean JACuisine=false;
+    public boolean ENCuisine=false;
+    public static final  String CURRENCY="Rs. ";
+
     @Override
     public void start(Stage primaryStage) {
         try{
@@ -25,5 +34,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 }

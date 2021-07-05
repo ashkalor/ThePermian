@@ -12,10 +12,15 @@
     -fx-border-width: 2px;
 }
 .cuisine-selection{
+    -fx-padding:15px;
     -fx-border-style: solid;
-    -fx-border-color: #ccc;
+    -fx-border-color: #CCC;
     -fx-border-width: 2px;
 }
+.meal-item-list{
+    -fx-padding:10px;
+}
+
 .side-pane{
     -fx-background-color:#000000;
 }

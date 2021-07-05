@@ -1,0 +1,63 @@
+INA001-Chicken Tikka-Rs.200
+INA002-Paneer Tikka-Rs.160
+INA003-Mutton Fry-Rs.260
+INM001-Chicken Biryani-Rs.250
+INM002-Roti-Rs.60
+INM003-Paneer Butter Masala-Rs.180
+IND001-Gulab Jamun-Rs.100
+IND002-Ras Malai-Rs.120
+IND003-Gajar Ka Halwa-Rs.120		
+FRA001-French Onion Soup-Rs.150
+FRA002-Crepes-Rs.140
+FRA003-Black Olive Tapenade-Rs.160
+FRM001-Chicken Dijon-Rs.260
+FRM002-Lyon Style Chicken-Rs.280
+FRM003-Braised Pork-Rs.320
+FRD001-Creme brulee-Rs.160
+FRD002-Macaroons-Rs.100
+FRD003-Croissants-Rs.80
+ITA001-Bruschetta-Rs.150
+ITA002-Caprese Salad-Rs.150
+ITA003-Foccacia Bread-Rs.120
+ITM001-Chicken Parmesan-Rs.280
+ITM002-Lasagne-Rs.250
+ITM003-Margherita Pizza-Rs.400
+ITD001-Tiramisu-Rs.200
+ITD002-Panna Cotta-Rs.160
+ITD003-Gelato-Rs.150
+MEA001-Nachos & Guacamole-Rs.150
+MEA002-Tomato Salsa & Chips-Rs.150
+MEA003-Quesadilla-Rs.200
+MEM001-Chicken Burrito-Rs.250
+MEM002-Enchilada-Rs.200
+MEM003-Paneer & Corn Taco-Rs.200
+MED001-Strawberry meringue cake-Rs.200
+MED002-Mexican chocoflan-Rs.200
+MED003-Sweet Mexican corn cake-Rs.180
+CHA001-Spring Rolls-Rs.150
+CHA002-Momos-Rs.120
+CHA003-Wonton-Rs.120
+CHM001-Burnt Garlic Rice-Rs.250
+CHM002-Gobi Manchurian-Rs.180	
+CHM003-Vegetable Manchurian Gravy-Rs.220
+CHD001-Almond Jelly-Rs.200
+CHD002-Chinese Fried Dough-Rs.150
+CHD003-Pineapple Tarts-Rs.180	
+JAA001-Salted Edamame-Rs.150
+JAA002-Japanese Rice Paper Roll-Rs.200
+JAA003-Daikon-Rs.200
+JAM001-Sushi-Rs.200
+JAM002-Prawn Tempura-Rs.220
+JAM003-Sashimi-Rs.220
+JAD001-Castella-Rs.250
+JAD002-Wagashi-Rs.200
+JAD003-Anmitsu-Rs.180
+ENA001-Canapes-Rs.220
+ENA002-Sesame Pork-Rs.300
+ENA003-Vegetable Frittata-Rs.180
+ENM001-Fish and Chips-Rs.200
+ENM002-Shepherd's Pie-Rs.280
+ENM003-Beef Wellington-Rs.350
+END001-Arctic roll-Rs.250
+END002-Bread & butter pudding-Rs.220
+END003-Crumble-Rs.200

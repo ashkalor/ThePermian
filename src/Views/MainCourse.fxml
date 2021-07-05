@@ -16,27 +16,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
-            prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Controller.AppetizersController">
-    <BorderPane layoutX="200.0" layoutY="205.0" prefHeight="605.0" prefWidth="1115.0" AnchorPane.bottomAnchor="0.0"
-                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainCoursesController">
+    <BorderPane layoutX="200.0" layoutY="205.0" prefHeight="605.0" prefWidth="1115.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <left>
-            <VBox prefHeight="200.0" prefWidth="300.0" styleClass="side-pane" stylesheets="@../css/styles.css"
-                  BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="300.0" styleClass="side-pane" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
                 <ImageView fitHeight="303.0" fitWidth="297.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@../img/logo.jpg"/>
+                    <Image url="@../img/logo.jpg" />
                 </ImageView>
-                <Pane prefHeight="136.0" prefWidth="300.0"/>
+                <Pane prefHeight="136.0" prefWidth="300.0" />
                 <VBox prefHeight="308.0" prefWidth="300.0">
-                    <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="260.0"
-                            style="-fx-text-fill: #000000;" styleClass="button-side"
-                            stylesheets="@../css/styles.css" text="Main Menu"/>
-                    <Pane prefHeight="34.0" prefWidth="277.0"/>
-                    <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="270.0" styleClass="button-side"
-                            stylesheets="@../css/styles.css" text="Add Menu Items"/>
+                    <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="260.0" style="-fx-text-fill: #000000;" styleClass="button-side" stylesheets="@../css/styles.css" text="Main Menu" />
+                    <Pane prefHeight="34.0" prefWidth="277.0" />
+                    <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="270.0" styleClass="button-side" stylesheets="@../css/styles.css" text="Add Menu Items" />
                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                     </VBox.margin>
                 </VBox>
             </VBox>
@@ -44,43 +37,44 @@
         <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                 <HBox prefHeight="100.0" prefWidth="200.0">
-                    <Label alignment="CENTER" prefHeight="82.0" prefWidth="484.0" text="Main Course">
+                    <Label alignment="CENTER" prefHeight="82.0" prefWidth="484.0" text="Main Courses">
                         <HBox.margin>
-                            <Insets/>
+                            <Insets />
                         </HBox.margin>
                         <font>
-                            <Font size="24.0"/>
+                            <Font size="24.0" />
                         </font>
                     </Label>
                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                     </VBox.margin>
                 </HBox>
-                <Pane prefHeight="470.0" prefWidth="460.0">
-                    <ScrollPane prefHeight="400.0" prefWidth="440.0">
-                        <GridPane prefHeight="0.0" prefWidth="0.0">
+                <Pane fx:id="pane" prefHeight="470.0" prefWidth="460.0">
+                    <ScrollPane fx:id="scroll" prefHeight="400.0" prefWidth="440.0">
+                        <GridPane fx:id="grid" prefHeight="50.0" prefWidth="430.0" vgap="5.0">
                             <rowConstraints>
-                                <RowConstraints/>
+                                <RowConstraints />
                             </rowConstraints>
                         </GridPane>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
                     </ScrollPane>
                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                     </VBox.margin>
                 </Pane>
                 <ButtonBar prefHeight="46.0" prefWidth="439.0">
                     <buttons>
-                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css"
-                                text="Back"/>
-                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css"
-                                text="Next"/>
+                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Back" />
+                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Next" />
                     </buttons>
                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                     </VBox.margin>
                 </ButtonBar>
                 <BorderPane.margin>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </BorderPane.margin>
             </VBox>
         </center>
