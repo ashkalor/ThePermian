@@ -10,14 +10,17 @@ import java.util.Objects;
 
 public class Main extends Application {
 
-    public boolean INCuisine=true;
-    public boolean FRCuisine=false;
-    public boolean ITCuisine=false;
-    public boolean MECuisine=false;
-    public boolean CHCuisine=false;
-    public boolean JACuisine=false;
-    public boolean ENCuisine=false;
-    public static final  String CURRENCY="Rs. ";
+
+    public static boolean INCuisine=false;
+    public static boolean FRCuisine= false;
+    public static boolean ITCuisine=false;
+    public static boolean MECuisine=false;
+    public static boolean CHCuisine=false;
+    public static boolean JACuisine=false;
+    public static boolean ENCuisine=false;
+    public static final  String CURRENCY="\u20B9";
+
+
 
     @Override
     public void start(Stage primaryStage) {

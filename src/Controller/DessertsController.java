@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainCoursesController implements Initializable {
+public class DessertsController implements Initializable {
 
     @FXML
     private Pane pane;
@@ -36,7 +36,7 @@ public class MainCoursesController implements Initializable {
     private Stage stage;
     private Parent root;
 
-    public void nextHandler(ActionEvent event) throws IOException {
+    public void finishHandler(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Desserts.fxml")));
         stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
@@ -44,17 +44,16 @@ public class MainCoursesController implements Initializable {
         stage.show();
     }
     public void backHandler(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Appetizers.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/MainCourse.fxml")));
         stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Meals obj=new Meals();
-        meals=obj.getMainCourses();
+        meals=obj.getDesserts();
         int column=0;
         int row=0;
         try {

@@ -41,8 +41,7 @@ public class Meal {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Meal)) return false;
-        Meal meal = (Meal) o;
+        if (!(o instanceof Meal meal)) return false;
         return Objects.equals(mid, meal.mid) && Objects.equals(mealName, meal.mealName) && Objects.equals(mealPrice, meal.mealPrice);
     }
 

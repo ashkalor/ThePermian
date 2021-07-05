@@ -1,17 +1,23 @@
 package Controller;
 
+import Main.Main;
 import Main.Meal;
 import Main.Meals;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AppetizersController implements Initializable {
@@ -25,7 +31,27 @@ public class AppetizersController implements Initializable {
     private GridPane grid;
 
     private List<Meal> meals;
+    private Scene scene;
+    private Stage stage;
+    private Parent root;
 
+    public void nextHandler(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/MainCourse.fxml")));
+        stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void backHandler(ActionEvent event) throws IOException {
+
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/MainMenu.fxml")));
+        stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        MainMenuController mainMenuController=new MainMenuController();
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Meals obj=new Meals();
@@ -46,5 +72,6 @@ public class AppetizersController implements Initializable {
         }catch (IOException e) {
         e.printStackTrace();
     }
+
     }
 }

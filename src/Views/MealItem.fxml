@@ -9,7 +9,7 @@
 
 <HBox prefHeight="50.0" prefWidth="438.0" styleClass="meal-item-list" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MealItemController">
    <children>
-      <Label fx:id="mealName" prefHeight="41.0" prefWidth="342.0" text="Chicken Tikka">
+      <Label fx:id="mealName" prefHeight="37.0" prefWidth="237.0">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
@@ -20,12 +20,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="mealPrice" alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="179.0" text="Rs.160">
+      <Label fx:id="mealPrice" alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="119.0">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="2.0">
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="152.0" spacing="2.0">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
@@ -33,9 +33,9 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <children>
-            <Button fx:id="removeMeal" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="-" />
-            <TextField fx:id="mealQuantity" alignment="CENTER" prefHeight="26.0" prefWidth="46.0" />
-            <Button fx:id="addMeal" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="+" />
+            <Button fx:id="removeMeal" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="-" />
+            <TextField fx:id="mealQuantity" alignment="CENTER" prefHeight="30.0" prefWidth="46.0" />
+            <Button fx:id="addMeal" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="+" />
          </children>
       </HBox>
    </children>

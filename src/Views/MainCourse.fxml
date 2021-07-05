@@ -66,8 +66,8 @@
                 </Pane>
                 <ButtonBar prefHeight="46.0" prefWidth="439.0">
                     <buttons>
-                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Back" />
-                        <Button mnemonicParsing="false" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Next" />
+                        <Button mnemonicParsing="false" onAction="#backHandler" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Back" />
+                        <Button mnemonicParsing="false" onAction="#nextHandler" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Next" />
                     </buttons>
                     <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
