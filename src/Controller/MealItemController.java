@@ -1,7 +1,9 @@
 package Controller;
 
-import Main.Main;
-import Main.Meal;
+import Model.Main;
+import Model.Meal;
+import Model.Cart;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -29,5 +31,11 @@ public class MealItemController {
         this.meal=meal;
         mealName.setText(meal.getMealName());
         mealPrice.setText(Main.CURRENCY +meal.getMealPrice());
+
+    }
+    public void addToCartHandler(ActionEvent event){
+
+        Cart cartObj = new Cart();
+
     }
 }

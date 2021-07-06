@@ -1,6 +1,6 @@
 package Controller;
 
-import Main.Main;
+import Model.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

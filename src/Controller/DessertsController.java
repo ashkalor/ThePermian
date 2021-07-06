@@ -1,7 +1,8 @@
 package Controller;
 
-import Main.Meal;
-import Main.Meals;
+import Model.Main;
+import Model.Meal;
+import Model.Meals;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -50,6 +52,13 @@ public class DessertsController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    public void mainMenuHandler(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/MainMenu.fxml")));
+        stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Meals obj=new Meals();
@@ -57,16 +66,16 @@ public class DessertsController implements Initializable {
         int column=0;
         int row=0;
         try {
-        for(int i=0;i<meals.size();i++){
-            FXMLLoader fxmlLoader=new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../Views/MealItem.fxml"));
-            HBox hbox=fxmlLoader.load();
-            MealItemController mealItemController=fxmlLoader.getController();
-            mealItemController.setMealItem(meals.get(i));
-            grid.add(hbox,column,row++);
+            for (Meal meal : meals) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("../Views/MealItem.fxml"));
+                HBox hbox = fxmlLoader.load();
+                MealItemController mealItemController = fxmlLoader.getController();
+                mealItemController.setMealItem(meal);
+                grid.add(hbox, column, row++);
 
 
-        }
+            }
         }catch (IOException e) {
         e.printStackTrace();
     }
