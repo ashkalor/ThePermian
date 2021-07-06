@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
@@ -25,18 +24,26 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="152.0" spacing="2.0">
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="154.0" spacing="5.0" styleClass="cart-item-button" stylesheets="@../css/styles.css">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding>
          <children>
-            <Button fx:id="removeMeal" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="-" />
-            <TextField fx:id="mealQuantity" alignment="CENTER" prefHeight="30.0" prefWidth="46.0" />
-            <Button fx:id="addMeal" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="cart-item-button" stylesheets="@../css/styles.css" text="+" />
+            <Button fx:id="removeMeal" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#removeFromCartHandler" prefHeight="50.0" prefWidth="35.0" styleClass="cart-add-button" stylesheets="@../css/styles.css" text="-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="mealLabel" alignment="CENTER" onMouseClicked="#addHandler" prefHeight="54.0" prefWidth="31.0" styleClass="cart-label-button" stylesheets="@../css/styles.css" text="ADD" />
+            <Button fx:id="addMeal" alignment="CENTER" mnemonicParsing="false" onAction="#addToCartHandler" prefHeight="50.0" prefWidth="35.0" styleClass="cart-add-button" stylesheets="@../css/styles.css" text="+">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
       </HBox>
    </children>
 </HBox>

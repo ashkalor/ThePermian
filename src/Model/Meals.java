@@ -12,11 +12,21 @@ public class Meals {
     private final List<Meal> mainCourses=new ArrayList<>();
     private final List<Meal> desserts=new ArrayList<>();
 
-    private final Map<String,Integer> appetizersQuantity=new TreeMap<>();
-    private final Map<String,Integer> mainCourseQuantity=new TreeMap<>();
-    private final Map<String,Integer> dessertsQuantity=new TreeMap<>();
+    private static Map<String,Integer> appetizersQuantity=new TreeMap<>();
+    private static  Map<String,Integer> mainCourseQuantity=new TreeMap<>();
+    private static  Map<String,Integer> dessertsQuantity=new TreeMap<>();
 
+    public static Map<String, Integer> getAppetizersQuantity() {
+        return appetizersQuantity;
+    }
 
+    public static Map<String, Integer> getMainCourseQuantity() {
+        return mainCourseQuantity;
+    }
+
+    public static Map<String, Integer> getDessertsQuantity() {
+        return dessertsQuantity;
+    }
 
     public Meals(){
 
@@ -32,7 +42,6 @@ public class Meals {
         Double mealPrice;
     try {
         BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
-        Main obj=new Main();
         while((data=bufferedReader.readLine())!=null) {
 
             transformedData=data.trim();
@@ -43,89 +52,112 @@ public class Meals {
             mealPrice=(Double.parseDouble(words[2].substring(3)));
             cuisineId=mid.substring(0,2);
             typeOfMealId=mid.substring(2,3);
-            if(obj.INCuisine && cuisineId.equals("IN")){
+            if(Main.INCuisine && cuisineId.equals("IN")){
                 if (typeOfMealId.equals("A")) {
                     appetizers.add(new Meal(mid, mealName, mealPrice));
                     appetizersQuantity.put(mid, 0);
+
                 } else if (typeOfMealId.equals("M")) {
                     mainCourses.add(new Meal(mid, mealName, mealPrice));
                     mainCourseQuantity.put(mid, 0);
+
+                } else {
+                    desserts.add(new Meal(mid, mealName, mealPrice));
+                    dessertsQuantity.put(mid, 0);
+
+                }
+            }
+            if(Main.ITCuisine && cuisineId.equals("IT")){
+                if (typeOfMealId.equals("A")) {
+                    appetizers.add(new Meal(mid, mealName, mealPrice));
+                    appetizersQuantity.put(mid, 0);
+
+                } else if (typeOfMealId.equals("M")) {
+                    mainCourses.add(new Meal(mid, mealName, mealPrice));
+                    mainCourseQuantity.put(mid, 0);
+
+                } else {
+                    desserts.add(new Meal(mid, mealName, mealPrice));
+                    dessertsQuantity.put(mid, 0);
+
+                }
+            }
+            if(Main.FRCuisine && cuisineId.equals("FR")){
+                if (typeOfMealId.equals("A")) {
+                    appetizers.add(new Meal(mid, mealName, mealPrice));
+                    appetizersQuantity.put(mid, 0);
+
+                } else if (typeOfMealId.equals("M")) {
+                    mainCourses.add(new Meal(mid, mealName, mealPrice));
+                    mainCourseQuantity.put(mid, 0);
+
+                } else {
+                    desserts.add(new Meal(mid, mealName, mealPrice));
+                    dessertsQuantity.put(mid, 0);
+
+                }
+            }
+            if(Main.MECuisine && cuisineId.equals("ME")){
+                if (typeOfMealId.equals("A")) {
+                    appetizers.add(new Meal(mid, mealName, mealPrice));
+                    appetizersQuantity.put(mid, 0);
+
+                } else if (typeOfMealId.equals("M")) {
+                    mainCourses.add(new Meal(mid, mealName, mealPrice));
+                    mainCourseQuantity.put(mid, 0);
+
                 } else {
                     desserts.add(new Meal(mid, mealName, mealPrice));
                     dessertsQuantity.put(mid, 0);
                 }
             }
-            if(obj.ITCuisine && cuisineId.equals("IT")){
+            if(Main.JACuisine && cuisineId.equals("JA")){
                 if (typeOfMealId.equals("A")) {
                     appetizers.add(new Meal(mid, mealName, mealPrice));
                     appetizersQuantity.put(mid, 0);
+
                 } else if (typeOfMealId.equals("M")) {
                     mainCourses.add(new Meal(mid, mealName, mealPrice));
                     mainCourseQuantity.put(mid, 0);
+
                 } else {
                     desserts.add(new Meal(mid, mealName, mealPrice));
                     dessertsQuantity.put(mid, 0);
+
                 }
             }
-            if(obj.FRCuisine && cuisineId.equals("FR")){
+            if(Main.CHCuisine && cuisineId.equals("CH")){
                 if (typeOfMealId.equals("A")) {
                     appetizers.add(new Meal(mid, mealName, mealPrice));
                     appetizersQuantity.put(mid, 0);
+
                 } else if (typeOfMealId.equals("M")) {
                     mainCourses.add(new Meal(mid, mealName, mealPrice));
                     mainCourseQuantity.put(mid, 0);
+
                 } else {
                     desserts.add(new Meal(mid, mealName, mealPrice));
                     dessertsQuantity.put(mid, 0);
+
                 }
             }
-            if(obj.MECuisine && cuisineId.equals("ME")){
+            if(Main.ENCuisine && cuisineId.equals("EN")){
                 if (typeOfMealId.equals("A")) {
                     appetizers.add(new Meal(mid, mealName, mealPrice));
                     appetizersQuantity.put(mid, 0);
+
                 } else if (typeOfMealId.equals("M")) {
                     mainCourses.add(new Meal(mid, mealName, mealPrice));
                     mainCourseQuantity.put(mid, 0);
+
                 } else {
                     desserts.add(new Meal(mid, mealName, mealPrice));
                     dessertsQuantity.put(mid, 0);
+
                 }
             }
-            if(obj.JACuisine && cuisineId.equals("JA")){
-                if (typeOfMealId.equals("A")) {
-                    appetizers.add(new Meal(mid, mealName, mealPrice));
-                    appetizersQuantity.put(mid, 0);
-                } else if (typeOfMealId.equals("M")) {
-                    mainCourses.add(new Meal(mid, mealName, mealPrice));
-                    mainCourseQuantity.put(mid, 0);
-                } else {
-                    desserts.add(new Meal(mid, mealName, mealPrice));
-                    dessertsQuantity.put(mid, 0);
-                }
-            }
-            if(obj.CHCuisine && cuisineId.equals("CH")){
-                if (typeOfMealId.equals("A")) {
-                    appetizers.add(new Meal(mid, mealName, mealPrice));
-                    appetizersQuantity.put(mid, 0);
-                } else if (typeOfMealId.equals("M")) {
-                    mainCourses.add(new Meal(mid, mealName, mealPrice));
-                    mainCourseQuantity.put(mid, 0);
-                } else {
-                    desserts.add(new Meal(mid, mealName, mealPrice));
-                    dessertsQuantity.put(mid, 0);
-                }
-            }if(obj.ENCuisine && cuisineId.equals("EN")){
-                if (typeOfMealId.equals("A")) {
-                    appetizers.add(new Meal(mid, mealName, mealPrice));
-                    appetizersQuantity.put(mid, 0);
-                } else if (typeOfMealId.equals("M")) {
-                    mainCourses.add(new Meal(mid, mealName, mealPrice));
-                    mainCourseQuantity.put(mid, 0);
-                } else {
-                    desserts.add(new Meal(mid, mealName, mealPrice));
-                    dessertsQuantity.put(mid,0);
-                }
-            }
+
+
         }
         bufferedReader.close();
       }catch (Exception e){
@@ -152,6 +184,9 @@ public class Meals {
         List<Meal> meals= new ArrayList<>(appetizers);
         meals.addAll(mainCourses);
         meals.addAll(desserts);
+        for(Meal meal:meals){
+
+        }
         return meals;
     }
 

@@ -38,8 +38,8 @@ public class DessertsController implements Initializable {
     private Stage stage;
     private Parent root;
 
-    public void finishHandler(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Desserts.fxml")));
+    public void nextHandler(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/OrderSummary.fxml")));
         stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
