@@ -24,7 +24,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="154.0" spacing="5.0" styleClass="cart-item-button" stylesheets="@../css/styles.css">
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="124.0" spacing="5.0" styleClass="cart-item-button" stylesheets="@../css/styles.css">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
@@ -34,7 +34,10 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label fx:id="mealLabel" alignment="CENTER" onMouseClicked="#addHandler" prefHeight="54.0" prefWidth="31.0" styleClass="cart-label-button" stylesheets="@../css/styles.css" text="ADD" />
+            <Label fx:id="mealLabel" alignment="CENTER" onMouseClicked="#addHandler" prefHeight="54.0" prefWidth="31.0" styleClass="cart-label-button" stylesheets="@../css/styles.css" text="ADD">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
             <Button fx:id="addMeal" alignment="CENTER" mnemonicParsing="false" onAction="#addToCartHandler" prefHeight="50.0" prefWidth="35.0" styleClass="cart-add-button" stylesheets="@../css/styles.css" text="+">
                <font>
                   <Font size="14.0" />

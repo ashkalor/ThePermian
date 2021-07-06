@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="50.0" prefWidth="438.0" styleClass="meal-item-list" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CartItemController">
+   <children>
+      <Label fx:id="mealLabel" prefHeight="37.0" prefWidth="237.0">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="90.0" text="x">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="quantityLabel" prefHeight="46.0" prefWidth="119.0" text="3">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" prefHeight="46.0" prefWidth="105.0" text="Label">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </children>
+</HBox>

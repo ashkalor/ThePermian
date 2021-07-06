@@ -64,15 +64,28 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                     </VBox.margin>
                 </Pane>
-                <ButtonBar prefHeight="46.0" prefWidth="439.0">
-                    <buttons>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Pane prefHeight="43.0" prefWidth="192.0">
+                     <children>
+                        <Label fx:id="totalPriceLabel" layoutY="-1.0" prefHeight="45.0" prefWidth="192.0" text="Total:">
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ButtonBar prefHeight="43.0" prefWidth="247.0">
+                     <buttons>
                         <Button mnemonicParsing="false" onAction="#backHandler" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Back" />
                         <Button mnemonicParsing="false" onAction="#finishHandler" styleClass="button-bottom" stylesheets="@../css/styles.css" text="Finish" />
-                    </buttons>
-                    <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                    </VBox.margin>
-                </ButtonBar>
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </HBox>
                 <BorderPane.margin>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </BorderPane.margin>
