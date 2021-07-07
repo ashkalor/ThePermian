@@ -122,7 +122,23 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    public void mainMenuHandler(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/MainMenu.fxml")));
+        stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void backHandler(ActionEvent event) throws IOException {
 
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Welcome.fxml")));
+        stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        MainMenuController mainMenuController=new MainMenuController();
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if(Main.INCuisine){

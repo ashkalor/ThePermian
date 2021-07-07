@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -66,6 +67,8 @@ public class AppetizersController implements Initializable {
         meals=obj.getAppetizers();
         int column=0;
         int row=0;
+        scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         try {
             for (Meal meal : meals) {
                 FXMLLoader fxmlLoader = new FXMLLoader();

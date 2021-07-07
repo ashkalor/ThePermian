@@ -65,6 +65,8 @@ public class DessertsController implements Initializable {
         meals=obj.getDesserts();
         int column=0;
         int row=0;
+        scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         try {
             for (Meal meal : meals) {
                 FXMLLoader fxmlLoader = new FXMLLoader();

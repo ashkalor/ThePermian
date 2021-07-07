@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainCoursesController implements Initializable {
+public class MainCourseController implements Initializable {
 
     @FXML
     private Pane pane;
@@ -66,6 +66,8 @@ public class MainCoursesController implements Initializable {
         meals=obj.getMainCourses();
         int column=0;
         int row=0;
+        scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         try {
             for (Meal meal : meals) {
                 FXMLLoader fxmlLoader = new FXMLLoader();

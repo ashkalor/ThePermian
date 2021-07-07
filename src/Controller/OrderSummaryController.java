@@ -1,8 +1,6 @@
 package Controller;
 
-import Model.Cart;
-import Model.Main;
-import Model.Meal;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,6 +40,20 @@ public class OrderSummaryController implements Initializable {
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Order o;
+        Orders orders;
+        Double cartItemPrice;
+        for(int i=0;i<orderItems.size();i++){
+            Meal m= orderItems.get(i);
+            cartItemPrice=(m.getMealPrice()*(Cart.cartItemsQuantity.get(m.getMid())));
+            o=new Order(i, m.getMealName(),Cart.cartItemsQuantity.get(m.getMid()),cartItemPrice);
+            orders=Orders.getINSTANCE();
+            orders.addOrder(o);
+            System.out.println(orders.getOrders());
+        }
+
+
+
     }
     public void backHandler(ActionEvent event) throws IOException {
 
@@ -50,7 +62,7 @@ public class OrderSummaryController implements Initializable {
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
-        CartItemController cartItemController= new CartItemController();
+
 
     }
     public void mainMenuHandler(ActionEvent event) throws IOException {
