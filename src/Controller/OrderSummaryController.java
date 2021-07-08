@@ -14,7 +14,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.*;
 
@@ -79,7 +79,7 @@ public class OrderSummaryController implements Initializable {
         System.out.println(Cart.cartItemsQuantity.values());
         int column=0;
         int row=0;
-        Double cartItemPrice;
+        double cartItemPrice;
         try {
             for (Meal meal : cartItems) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -94,7 +94,7 @@ public class OrderSummaryController implements Initializable {
         }catch (IOException e) {
             e.printStackTrace();
         }
-        totalPriceLabel.setText("Total Price: "+ Main.CURRENCY+String.valueOf(totalPrice));
+        totalPriceLabel.setText("Total Price: "+ Main.CURRENCY+totalPrice);
         if(!cartItems.isEmpty()){
         Orders.addOrders(cartItems);
         Orders.orderIds.put(++incrementer,cartItems);
@@ -107,6 +107,72 @@ public class OrderSummaryController implements Initializable {
         Main.JACuisine=false;
         Main.CHCuisine=false;
         Main.FRCuisine=false;
+        int buffersize= 8*1024;
+        File file=new File("D:/Software Development/java/ThePermian/src/Data/orders.txt");
+        try {
+            if(file.createNewFile()) {
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", false), buffersize);
+                bufferedWriter.write("============================================\n");
+                bufferedWriter.write("                     BILL");
+                bufferedWriter.newLine();
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+                String data = String.format("%-25s %s    %s \r\n", "Item", "Quantity", "Price");
+                bufferedWriter.write(data);
+                bufferedWriter.write("--------------------------------------------");
+                bufferedWriter.newLine();
+                for (Meal m : cartItems) {
+                    cartItemPrice = (m.getMealPrice() * (Cart.cartItemsQuantity.get(m.getMid())));
+                    data = String.format("%-25s  %s%3x   %10.2f \r\n", m.getMealName(), "x", Cart.cartItemsQuantity.get(m.getMid()), cartItemPrice);
+                    bufferedWriter.write(data);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                }
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                data = String.format("%s %x                    %s %5.2f", "OrderID:", incrementer, "TOTAL:", totalPrice);
+                bufferedWriter.write(data);
+                bufferedWriter.newLine();
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                bufferedWriter.newLine();
+                bufferedWriter.newLine();
+                bufferedWriter.close();
+            }else{
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", true), buffersize);
+                bufferedWriter.write("============================================\n");
+                bufferedWriter.write("                     BILL");
+                bufferedWriter.newLine();
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+                String data = String.format("%-25s %s    %s \r\n", "Item", "Quantity", "Price");
+                bufferedWriter.write(data);
+                bufferedWriter.write("--------------------------------------------");
+                bufferedWriter.newLine();
+                for (Meal m : cartItems) {
+                    cartItemPrice = (m.getMealPrice() * (Cart.cartItemsQuantity.get(m.getMid())));
+                    data = String.format("%-25s  %s%3x   %10.2f \r\n", m.getMealName(), "x", Cart.cartItemsQuantity.get(m.getMid()), cartItemPrice);
+                    bufferedWriter.write(data);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                }
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                data = String.format("%s %x                    %s %5.2f", "OrderID:", incrementer, "TOTAL:", totalPrice);
+                bufferedWriter.write(data);
+                bufferedWriter.newLine();
+                bufferedWriter.write("============================================");
+                bufferedWriter.newLine();
+                bufferedWriter.newLine();
+                bufferedWriter.newLine();
+                bufferedWriter.close();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
