@@ -78,7 +78,7 @@ public class MealItemController {
             if (mealLabel.getText() != "ADD")
                 mealLabel.setText(String.valueOf(--quantity));
 
-            System.out.println(Cart.cartItems);
+            System.out.println(cartObj.cartItems);
         }catch (Exception e){
             cartObj.removeMealById(meal.getMid());
             if (mealLabel.getText() != "ADD")

@@ -1,6 +1,22 @@
 .welcome-text{
     color:#EDE9DE;
 }
+
+.scroll-pane > .viewport{
+-fx-background-color:transparent;
+-fx-border-color:transparent;
+
+}
+.button{
+    -fx-border-radius:15px;
+
+}
+
+.grid-pane > .viewport{
+-fx-background-color:transparent;
+-fx-border-color:transparent;
+
+}
 .left-button{
     -fx-background-radius:20;
         -fx-background-image:url('../img/left.png');
@@ -80,8 +96,14 @@
 }
 
 .card {
-   -fx-border-radius:14px;
-    -fx-background-radius:14px;
-  -fx-background-color: white;
+  -fx-border-radius:14px;
+  -fx-background-radius:14px;
   -fx-effect:dropshadow(two-pass-box, rgba(0, 0, 0, 0.25),14,0,0,0);
+  -fx-background-color:white;
+}
+.card-item{
+    -fx-border-style: solid none solid none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ccc;
+   -fx-background-color:white;
 }

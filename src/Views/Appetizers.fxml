@@ -75,7 +75,7 @@
                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                               </padding>
                               <content>
-                                 <GridPane fx:id="grid" prefHeight="50.0" prefWidth="430.0" vgap="5.0">
+                                 <GridPane fx:id="grid" prefHeight="70.0" prefWidth="430.0" stylesheets="@../css/styles.css">
                                     <rowConstraints>
                                        <RowConstraints />
                                     </rowConstraints>

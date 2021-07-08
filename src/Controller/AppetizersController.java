@@ -51,7 +51,6 @@ public class AppetizersController implements Initializable {
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
-        MainMenuController mainMenuController=new MainMenuController();
 
     }
     public void mainMenuHandler(ActionEvent event) throws IOException {

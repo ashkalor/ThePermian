@@ -182,11 +182,9 @@ public class Meals {
 
     public List<Meal> getMeals(){
         List<Meal> meals= new ArrayList<>(appetizers);
+        Orders order=new Orders();
         meals.addAll(mainCourses);
         meals.addAll(desserts);
-        for(Meal meal:meals){
-
-        }
         return meals;
     }
 

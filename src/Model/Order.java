@@ -1,61 +1,33 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Order {
 
-    private Integer oid;
-    private String orderName;
-    private Integer orderQuantity;
-    private Double orderPrice;
+    private  List<Meal> meals;
+    private int OrderId;
 
-    public Order(Integer oid, String orderName, Integer orderQuantity, Double orderPrice) {
-        this.oid = oid;
-        this.orderName = orderName;
-        this.orderQuantity = orderQuantity;
-        this.orderPrice = orderPrice;
-    }
-    public Integer getOid() {
-        return oid;
+    public  List<Meal> getMeals() {
+        return meals;
     }
 
-    public void setOid(Integer oid) {
-        this.oid = oid;
-    }
-
-    public String getOrderName() {
-        return orderName;
-    }
-
-    public void setOrderName(String orderName) {
-        this.orderName = orderName;
-    }
-
-    public Integer getOrderQuantity() {
-        return orderQuantity;
-    }
-
-    public void setOrderQuantity(Integer orderQuantity) {
-        this.orderQuantity = orderQuantity;
-    }
-
-    public Double getOrderPrice() {
-        return orderPrice;
-    }
-
-    public void setOrderPrice(Double orderPrice) {
-        this.orderPrice = orderPrice;
+    public void setMeals(List<Meal> meals) {
+        this.meals = meals;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Order order)) return false;
-        return Objects.equals(oid, order.oid) && Objects.equals(orderName, order.orderName) && Objects.equals(orderQuantity, order.orderQuantity) && Objects.equals(orderPrice, order.orderPrice);
+        if (!(o instanceof Order)) return false;
+        Order order = (Order) o;
+        return Objects.equals(meals, order.meals);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(oid, orderName, orderQuantity, orderPrice);
+        return Objects.hash(meals);
     }
 }
+

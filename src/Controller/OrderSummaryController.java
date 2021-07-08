@@ -12,7 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,32 +26,22 @@ public class OrderSummaryController implements Initializable {
     @FXML
     private Label totalPriceLabel;
 
-    private List<Meal> meals;
+    @FXML
+    private ScrollPane scroll;
     private Scene scene;
     private Stage stage;
     private Parent root;
     private Double totalPrice=0.0;
-    public static List<Meal> orderItems = new ArrayList<>();
+    Cart obj=new Cart();
+    Order order=new Order();
+    private static Integer incrementer =0;
 
     public void finishHandler(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Welcome.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Orders.fxml")));
         stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Order o;
-        Orders orders;
-        Double cartItemPrice;
-        for(int i=0;i<orderItems.size();i++){
-            Meal m= orderItems.get(i);
-            cartItemPrice=(m.getMealPrice()*(Cart.cartItemsQuantity.get(m.getMid())));
-            o=new Order(i, m.getMealName(),Cart.cartItemsQuantity.get(m.getMid()),cartItemPrice);
-            orders=Orders.getINSTANCE();
-            orders.addOrder(o);
-            System.out.println(orders.getOrders());
-        }
-
-
 
     }
     public void backHandler(ActionEvent event) throws IOException {
@@ -75,12 +64,16 @@ public class OrderSummaryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Cart obj=new Cart();
-        meals=obj.getCartItems();
+        List<Meal> cartItems=new ArrayList<>();
+        order.setMeals(obj.getCartItems());
+        List<Meal> meals=order.getMeals();
+        scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+
         for(Meal m:meals){
             Cart.cartItemsQuantity.put(m.getMid(), Collections.frequency(meals,m));
-            if(!orderItems.contains(m)){
-                orderItems.add(m);
+            if(!cartItems.contains(m)){
+                cartItems.add(m);
             }
         }
         System.out.println(Cart.cartItemsQuantity.values());
@@ -88,7 +81,7 @@ public class OrderSummaryController implements Initializable {
         int row=0;
         Double cartItemPrice;
         try {
-            for (Meal meal : orderItems) {
+            for (Meal meal : cartItems) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("../Views/CartItem.fxml"));
                 HBox hbox = fxmlLoader.load();
@@ -102,6 +95,19 @@ public class OrderSummaryController implements Initializable {
             e.printStackTrace();
         }
         totalPriceLabel.setText("Total Price: "+ Main.CURRENCY+String.valueOf(totalPrice));
+        if(!cartItems.isEmpty()){
+        Orders.addOrders(cartItems);
+        Orders.orderIds.put(++incrementer,cartItems);
+        }
+        obj.clearCart();
+        Main.ENCuisine=false;
+        Main.INCuisine=false;
+        Main.ENCuisine=false;
+        Main.ITCuisine=false;
+        Main.JACuisine=false;
+        Main.CHCuisine=false;
+        Main.FRCuisine=false;
+
 
     }
 }

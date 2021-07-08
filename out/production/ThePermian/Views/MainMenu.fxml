@@ -53,7 +53,7 @@
                               <Insets bottom="10.0" left="20.0" right="40.0" top="30.0" />
                            </VBox.margin>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backHandler" prefHeight="47.0" prefWidth="50.0" styleClass="left-button" stylesheets="@../css/styles.css" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backHandler" prefHeight="46.0" prefWidth="50.0" styleClass="left-button" stylesheets="@../css/styles.css" />
                               <Label alignment="CENTER" prefHeight="47.0" prefWidth="338.0" text="MAIN MENU" textFill="WHITE">
                                  <HBox.margin>
                                     <Insets />
@@ -62,7 +62,7 @@
                                     <Font size="32.0" />
                                  </font>
                               </Label>
-                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#nextHandler" prefHeight="46.0" prefWidth="50.0" styleClass="right-button" stylesheets="@../css/styles.css" >
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#nextHandler" prefHeight="46.0" prefWidth="50.0" styleClass="right-button" stylesheets="@../css/styles.css">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>

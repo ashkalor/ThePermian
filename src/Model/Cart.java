@@ -12,7 +12,6 @@ public class Cart {
     public List<Meal> getCartItems() {
         return cartItems;
     }
-    Meals obj =new Meals();
     public void addMealToCartByMid(String mid) {
         Meal meal=getMealByMealId(mid);
         cartItems.add(meal);
@@ -21,6 +20,9 @@ public class Cart {
     public void removeMealById(String mid) {
         Meal meal=getMealByMealId(mid);
         cartItems.remove(meal);
+    }
+    public void  clearCart(){
+        cartItems.clear();
     }
 
     private Meal getMealByMealId(String mid) {

@@ -1,36 +1,22 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Orders {
 
-    private Order order;
-    private static final Orders INSTANCE= new Orders();
+    public static void setOrders(List<List<Meal>> orders) {
+        Orders.orders = orders;
+    }
 
-
-    private List<Order> orders=new ArrayList<>();
-
-    private Orders(){
+    private static List<List<Meal>> orders= new ArrayList<>();
+    public static TreeMap<Integer,List<Meal>> orderIds = new TreeMap<>() ;
+    public static void addOrders(List<Meal> order){
+        orders.add(order);
 
     }
-    public List<Order> getOrders() {
+    public static List<List<Meal>> getOrders() {
         return orders;
     }
 
-    public void addOrder(Order order) {
-        this.orders.add(order);
-    }
-
-    public Order getOrder() {
-        return this.order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-
-    public static Orders getINSTANCE() {
-        return INSTANCE;
-    }
 }
+

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="50.0" prefWidth="438.0" styleClass="meal-item-list" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MealItemController">
+<HBox prefHeight="70.0" prefWidth="430.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MealItemController">
    <children>
       <Label fx:id="mealName" prefHeight="37.0" prefWidth="237.0">
          <HBox.margin>
@@ -49,4 +50,8 @@
          </padding>
       </HBox>
    </children>
+   <styleClass>
+      <String fx:value="meal-item-list" />
+      <String fx:value="card-item" />
+   </styleClass>
 </HBox>
