@@ -2,19 +2,16 @@ package Model;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Meals {
     private final List<Meal> appetizers=new ArrayList<>();
     private final List<Meal> mainCourses=new ArrayList<>();
     private final List<Meal> desserts=new ArrayList<>();
 
-    private static Map<String,Integer> appetizersQuantity=new TreeMap<>();
-    private static  Map<String,Integer> mainCourseQuantity=new TreeMap<>();
-    private static  Map<String,Integer> dessertsQuantity=new TreeMap<>();
+    private static Map<String,Integer> appetizersQuantity=new HashMap<>();
+    private static  Map<String,Integer> mainCourseQuantity=new HashMap<>();
+    private static  Map<String,Integer> dessertsQuantity=new HashMap<>();
 
     public static Map<String, Integer> getAppetizersQuantity() {
         return appetizersQuantity;

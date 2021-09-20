@@ -7,7 +7,6 @@ import java.util.Objects;
 public class Order {
 
     private  List<Meal> meals;
-    private int OrderId;
 
     public  List<Meal> getMeals() {
         return meals;

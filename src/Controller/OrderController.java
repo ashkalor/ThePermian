@@ -40,7 +40,6 @@ public class OrderController {
             }
         }
 
-        /*orderIdLabel.setText("Order ID: "+String.valueOf(Orders.orderIds.getKe);*/
         try {
             int column=0;
             int row=0;

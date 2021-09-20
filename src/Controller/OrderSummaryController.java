@@ -34,7 +34,7 @@ public class OrderSummaryController implements Initializable {
     private Double totalPrice=0.0;
     Cart obj=new Cart();
     Order order=new Order();
-    private static Integer incrementer =0;
+    private static Integer incrementer =0 ;
 
     public void finishHandler(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Orders.fxml")));
@@ -107,11 +107,11 @@ public class OrderSummaryController implements Initializable {
         Main.JACuisine=false;
         Main.CHCuisine=false;
         Main.FRCuisine=false;
-        int buffersize= 8*1024;
+        int bufferSize= 8*1024;
         File file=new File("D:/Software Development/java/ThePermian/src/Data/orders.txt");
         try {
             if(file.createNewFile()) {
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", false), buffersize);
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", false), bufferSize);
                 bufferedWriter.write("============================================\n");
                 bufferedWriter.write("                     BILL");
                 bufferedWriter.newLine();
@@ -140,7 +140,7 @@ public class OrderSummaryController implements Initializable {
                 bufferedWriter.newLine();
                 bufferedWriter.close();
             }else{
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", true), buffersize);
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:/Software Development/java/ThePermian/src/Data/orders.txt", true), bufferSize);
                 bufferedWriter.write("============================================\n");
                 bufferedWriter.write("                     BILL");
                 bufferedWriter.newLine();

@@ -9,7 +9,9 @@
 }
 .button{
     -fx-border-radius:15px;
-
+    -fx-background-radius:15px;
+        -fx-background-color:RGBA(255,219,131);
+        -fx-text-fill:#000000;
 }
 
 .grid-pane > .viewport{
@@ -43,7 +45,7 @@
 .cuisine-selection{
     -fx-padding:15px;
     -fx-border-style: solid;
-    -fx-border-color: #CCC;
+    -fx-border-color: #FFDB83;
     -fx-border-width: 2px;
 }
 .meal-item-list{
@@ -106,4 +108,8 @@
     -fx-border-width: 0 0 1 0;
     -fx-border-color: #ccc;
    -fx-background-color:white;
+}
+
+.name{
+-fx-text-fill:white;
 }

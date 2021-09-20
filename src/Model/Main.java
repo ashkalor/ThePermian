@@ -26,7 +26,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try{
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../Views/Welcome.fxml")));
-            primaryStage.setTitle("Hello World");
+            primaryStage.setTitle("The Permian");
             primaryStage.setScene(new Scene(root, 800, 600));
             primaryStage.show();
         }catch (Exception e){

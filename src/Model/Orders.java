@@ -9,7 +9,8 @@ public class Orders {
     }
 
     private static List<List<Meal>> orders= new ArrayList<>();
-    public static TreeMap<Integer,List<Meal>> orderIds = new TreeMap<>() ;
+    public static HashMap<Integer,List<Meal>> orderIds = new HashMap<>() ;
+
     public static void addOrders(List<Meal> order){
         orders.add(order);
 

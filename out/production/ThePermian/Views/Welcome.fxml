@@ -10,41 +10,40 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;"
-            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Controller.WelcomeController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WelcomeController">
     <VBox prefHeight="600.0" prefWidth="800.0">
 
         <HBox prefHeight="450.0" prefWidth="800.0">
 
             <VBox prefHeight="334.0" prefWidth="800.0">
-                <Pane prefHeight="97.0" prefWidth="800.0"/>
+                <Pane prefHeight="97.0" prefWidth="800.0" />
                 <HBox prefHeight="100.0" prefWidth="200.0">
 
-                    <Pane prefHeight="200.0" prefWidth="500.0"/>
-                    <ImageView fitHeight="315.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true"
-                               scaleX="1.5" scaleY="1.5">
+                    <Pane prefHeight="200.0" prefWidth="500.0" />
+                    <ImageView fitHeight="315.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
 
-                            <Image url="@../img/logo.jpg"/>
+                            <Image url="@../img/logo.jpg" />
 
                         <HBox.margin>
-                            <Insets right="18.0"/>
+                            <Insets right="18.0" />
                         </HBox.margin>
                     </ImageView>
-                    <Pane prefHeight="200.0" prefWidth="500.0"/>
+                    <Pane prefHeight="200.0" prefWidth="500.0" />
 
                 </HBox>
             </VBox>
 
         </HBox>
-        <Label alignment="CENTER" onMouseClicked="#welcomeHandler" prefHeight="90.0"
-               prefWidth="800.0" styleClass="welcome-text" stylesheets="@../css/styles.css" text="CLICK TO START"
-               textFill="#ffffff4d">
+        <Label alignment="CENTER" onMouseClicked="#welcomeHandler" prefHeight="90.0" prefWidth="800.0" styleClass="welcome-text" stylesheets="@../css/styles.css" text="CLICK TO START" textFill="#ffffff4d">
             <font>
-                <Font size="37.0"/>
+                <Font size="37.0" />
             </font>
         </Label>
-        <Pane prefHeight="38.0" prefWidth="800.0"/>
+      <HBox prefHeight="50.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="87.0" prefWidth="542.0" />
+         </children>
+      </HBox>
 
     </VBox>
 </AnchorPane>
